@@ -47,3 +47,10 @@ model Status2 {
   id    Int    @id @default(autoincrement())
   text  String @unique
 }
+
+model Person2 {
+  id     Int              @id @default(autoincrement())
+  email  String           @unique
+  name   String
+  avatar String?
+}

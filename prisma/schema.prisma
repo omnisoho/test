@@ -46,6 +46,7 @@ model TaskAssignment {
 model Status2 {
   id    Int    @id @default(autoincrement())
   text  String @unique
+  desc  String @default("desc")
 }
 
 model Person2 {

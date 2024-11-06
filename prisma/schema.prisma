@@ -49,11 +49,20 @@ model Status1 {
 }
 
 model Status2 {
+
   id   Int    @id @default(autoincrement())
   text String @unique
   part String @default("part")
+    desc  String @default("desc")
 }
 
 model People {
   name   String @unique
+}
+
+model Person2 {
+  id     Int              @id @default(autoincrement())
+  email  String           @unique
+  name   String
+  avatar String?
 }

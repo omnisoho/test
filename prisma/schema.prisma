@@ -42,3 +42,8 @@ model TaskAssignment {
 
   @@id(name: "assignmentId", [taskId, personId])
 }
+
+model Status2 {
+  id    Int    @id @default(autoincrement())
+  text  String @unique
+}

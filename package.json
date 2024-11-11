@@ -16,7 +16,7 @@
     "prisma": "^5.16.1"
   },
   "prisma": {
-    "seed": "node prisma/seed.js"
+    "seed": "node prisma/seed.js && prisma/seed-status1.js"
   },
   "scripts": {
     "postinstall": "npx prisma generate",
@@ -25,6 +25,7 @@
     "start": "dotenv -e .env.development -- node ./src/server.js",
     "test": "dotenv -e .env.test -- playwright test --config=configs/playwright.config.js",
     "lint": "eslint -c configs/eslint.config.mjs ./src/*",
-    "test-trace": "npm test -- --reporter=html --trace on"
+    "test-trace": "npm test -- --reporter=html --trace on",
+    "seed-status1": "dotenv -e .env.development -- node prisma/seed-status1.js"  
   }
 }
